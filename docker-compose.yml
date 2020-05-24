@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    container_name: rides
+    build: .
+    image: rides:latest
+    command: python3 rides.py
+    restart: always
+    environment:
+    - TEAM_NAME=CC_1531_2371_2414
+    ports:
+      - "8000:80"
